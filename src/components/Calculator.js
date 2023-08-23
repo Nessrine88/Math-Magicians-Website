@@ -15,7 +15,8 @@ const Calculator = () => {
   };
 
   return (
-    <div>
+    <div className="calculator">
+      <h2>Calculator</h2>
       <table className="table">
         <thead>
           <tr>
