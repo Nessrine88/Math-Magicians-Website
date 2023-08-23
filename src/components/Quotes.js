@@ -24,9 +24,11 @@ padding: 20px;
 
 const StyledListItem = styled.li`
 margin-left: 0;
-color: #fff;
+color: darkblue;
 width: 70%;
 text-align: center;
+line-height: 2;
+font-family: georgia;
 `;
 
 function Quotes() {

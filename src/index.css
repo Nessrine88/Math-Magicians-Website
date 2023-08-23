@@ -7,11 +7,8 @@
 }
 
 .table {
-  width: 50%;
-  height: 30%;
+  width: 100%;
   border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .table th,
@@ -51,9 +48,25 @@ body {
   background-color: #272727;
 }
 
+.calculator {
+  display: flex;
+  justify-content: space-between;
+}
+
 .calculator h2 {
   text-align: center;
   color: #14a76c;
   padding: 5%;
   font-size: 56px;
+  width: 100%;
+}
+
+.calcul {
+  margin: 5% 10% 0 0;
+  width: 50%;
+}
+
+.header {
+  margin-top: 2%;
+  width: 50%;
 }
