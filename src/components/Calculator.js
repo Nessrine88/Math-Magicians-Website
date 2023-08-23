@@ -15,48 +15,52 @@ const Calculator = () => {
   };
 
   return (
-    <div>
-      <table className="table">
-        <thead>
-          <tr>
-            <th className="TaHeader" colSpan={4}>
-              <Operations calculatorState={calculatorState} />
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td onClick={() => handleClick('AC')}>AC</td>
-            <td onClick={() => handleClick('+/-')}>+/-</td>
-            <td onClick={() => handleClick('%')}>%</td>
-            <td onClick={() => handleClick('÷')}>÷</td>
-          </tr>
-          <tr>
-            <td onClick={() => handleClick(7)}>7</td>
-            <td onClick={() => handleClick(8)}>8</td>
-            <td onClick={() => handleClick(9)}>9</td>
-            <td onClick={() => handleClick('x')}>x</td>
-          </tr>
-          <tr>
-            <td onClick={() => handleClick(4)}>4</td>
-            <td onClick={() => handleClick(5)}>5</td>
-            <td onClick={() => handleClick(6)}>6</td>
-            <td onClick={() => handleClick('-')}>-</td>
-          </tr>
-          <tr>
-            <td onClick={() => handleClick(1)}>1</td>
-            <td onClick={() => handleClick(2)}>2</td>
-            <td onClick={() => handleClick(3)}>3</td>
-            <td onClick={() => handleClick('+')}>+</td>
-          </tr>
-          <tr>
-            <td colSpan={2} onClick={() => handleClick(0)}>0</td>
-            <td onClick={() => handleClick('.')}>.</td>
-            <td className="equalCell" onClick={() => handleClick('=')}>=</td>
-          </tr>
-        </tbody>
-      </table>
-
+    <div className="calculator">
+      <div className="header">
+        <h2>Let&apos;s do some Math!</h2>
+      </div>
+      <div className="calcul">
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="TaHeader" colSpan={4}>
+                <Operations calculatorState={calculatorState} />
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td onClick={() => handleClick('AC')}>AC</td>
+              <td onClick={() => handleClick('+/-')}>+/-</td>
+              <td onClick={() => handleClick('%')}>%</td>
+              <td onClick={() => handleClick('÷')}>÷</td>
+            </tr>
+            <tr>
+              <td onClick={() => handleClick(7)}>7</td>
+              <td onClick={() => handleClick(8)}>8</td>
+              <td onClick={() => handleClick(9)}>9</td>
+              <td onClick={() => handleClick('x')}>x</td>
+            </tr>
+            <tr>
+              <td onClick={() => handleClick(4)}>4</td>
+              <td onClick={() => handleClick(5)}>5</td>
+              <td onClick={() => handleClick(6)}>6</td>
+              <td onClick={() => handleClick('-')}>-</td>
+            </tr>
+            <tr>
+              <td onClick={() => handleClick(1)}>1</td>
+              <td onClick={() => handleClick(2)}>2</td>
+              <td onClick={() => handleClick(3)}>3</td>
+              <td onClick={() => handleClick('+')}>+</td>
+            </tr>
+            <tr>
+              <td colSpan={2} onClick={() => handleClick(0)}>0</td>
+              <td onClick={() => handleClick('.')}>.</td>
+              <td className="equalCell" onClick={() => handleClick('=')}>=</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
   );

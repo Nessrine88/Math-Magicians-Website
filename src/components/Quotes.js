@@ -1,5 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import './Quotes.css';
+import styled from 'styled-components';
+
+const QuotesContainer = styled.div`
+display: flex;
+margin-right: auto;
+margin-left: auto;
+margin-top: 15%;
+width: 50%;
+border-radius: 10%;
+border: 1px solid;
+font-family: 'Mukta', sans-serif;
+background-color: #14a76c;
+justify-content: center;
+align-items: center;
+`;
+
+const StyledList = styled.ul`
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+`;
+
+const StyledListItem = styled.li`
+margin-left: 0;
+color: darkblue;
+width: 70%;
+text-align: center;
+line-height: 2;
+font-family: georgia;
+`;
 
 function Quotes() {
   const [data, setData] = useState([]);
@@ -29,11 +59,13 @@ function Quotes() {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <ul>
-      {data.map((item) => (
-        <li key={item.id}>{item.quote}</li>
-      ))}
-    </ul>
+    <QuotesContainer>
+      <StyledList>
+        {data.map((item) => (
+          <StyledListItem key={item.id}>{item.quote}</StyledListItem>
+        ))}
+      </StyledList>
+    </QuotesContainer>
   );
 }
 
